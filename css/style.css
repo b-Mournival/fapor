@@ -155,6 +155,14 @@ header nav {
     float: right;
     margin-right: 6px;
     margin-top: 2px;
+    background-color: #dedede;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width: 28px;
+    line-height: 28px;
+    font-size: 14px;
 }
 
 .workers:after {
@@ -270,6 +278,23 @@ header nav {
     font-size: 11px;
     color: black;
     text-transform: capitalize;
+}
+
+.owl-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.owl-prev, .owl-next {
+    font-family: "Font Awesome 5 Free";
+    outline: none;
+}
+
+.owl-nav .owl-prev:before {
+    content: "\f105";
+}
+
+.owl-nav .owl-next:after {
+    content: "\f105";
 }
 
 .about {
@@ -392,6 +417,19 @@ footer h4 {
     display: inline-block;
     float: right;
     margin-left: 8px;
+    text-decoration: none;
+    color: #6e7279;
+    border-radius: 50%;
+    border: 1px solid;
+    width: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 14px;
+}
+.feedback a:hover, .feedback a.active {
+    background-color: #b2a563;
+    color: white;
+    border-color: #b2a563;
 }
 
 .feedback:after {
@@ -399,18 +437,6 @@ footer h4 {
     display: block;
     content: "";
 }
-.soc_icon {
-    background-color: #6e7279;
-    width: 28px;
-    height: 28px;
-    text-align: center;
-    border-radius: 50%;
-    border: solid 1px #6e7279;
-    line-height: 28px;
-    font-size: 28px;
-    color: #24282f;
-}
-
 
 .wrapper {
     max-width: 1170px;
