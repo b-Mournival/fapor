@@ -142,10 +142,10 @@ ul li:hover a:after, ul li.active a:after {
     font-size: 14px;
 }
 .management > a {
+    font-family: "Open Sans";
     display: block;
     max-width: 130px;
     margin: 0 auto;
-    font-family: "Open Sans";
     font-size: 13px;
     text-align: center;
     text-transform: uppercase;
@@ -188,8 +188,8 @@ ul li:hover a:after, ul li.active a:after {
     margin: 0 auto 30px;
 }
 .reviews p {
-    padding: 0 15px;
     font-family: "Open Sans";
+    padding: 0 15px;
     font-weight: 300;
     font-size: 11px;
     color: black;
@@ -258,10 +258,10 @@ footer a, footer img {
     display: flex;
     justify-content: space-between;
 }
-footer h4 {
+footer h3 {
+    font-family: "Open Sans";
     color: #b2a563;
     text-transform: uppercase;
-    font-family: "Open Sans";
     font-weight: 600;
     font-size: 11px;
     margin-bottom: 23px;

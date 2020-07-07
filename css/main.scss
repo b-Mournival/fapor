@@ -1,0 +1,443 @@
+@import "fonts.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
+@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
+
+$main_font: "Open Sans";
+$primary_font: "Raleway";
+$icon: "Font Awesome 5 Free";
+
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background-color: #24282f;
+  padding-top: 30px;
+
+  .container {
+    @extend .flex;
+
+    .logo {
+      margin-left: 7px;
+    }
+
+    ul {
+      list-style: none;
+      @extend .flex;
+
+      li {
+        margin-left: 50px;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        a {
+          color: white;
+          font-family: $main_font;
+          font-size: 12px;
+          text-decoration: none;
+          text-transform: uppercase;
+          line-height: 19px;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #b2a563;
+            margin-top: 29px;
+            transition: 0.3s;
+          }
+        }
+
+        &:hover, &.active {
+          a {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  width: 100%;
+  background: url("../images/bg_blur.jpg") no-repeat top center #2b2e35;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: white;
+
+  h1 {
+    text-transform: uppercase;
+    font-family: $primary_font, sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    line-height: 0.7;
+  }
+
+  p {
+    font-family: $main_font;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    line-height: 1.7;
+  }
+}
+
+.management {
+  padding-top: 120px;
+  padding-bottom: 25px;
+
+  h2 {
+    color: #24282f;
+    font-family: $primary_font;
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:after {
+      display: block;
+      content: "";
+      width: 61px;
+      height: 2px;
+      background-color: #b2a563;
+      margin: 22px auto 26px;
+    }
+  }
+
+  .container {
+    max-width: 900px;
+    margin-bottom: 35px;
+    @extend .flex;
+
+    .workers {
+      img {
+        display: block;
+        margin-bottom: 25px;
+      }
+
+      .workers_itm {
+        @extend .flex;
+
+        h3 {
+          display: inline-block;
+          font-family: $primary_font;
+          font-weight: 500;
+          font-size: 13px;
+          color: #232323;
+          text-transform: uppercase;
+          margin-left: 8px;
+
+          span {
+            font-family: $main_font;
+            font-size: 11px;
+            text-transform: capitalize;
+            color: #b2a563;
+          }
+        }
+
+        div {
+          @extend .flex;
+
+          a {
+            margin-right: 6px;
+            margin-top: 2px;
+            background-color: #dedede;
+            border-radius: 50%;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            width: 28px;
+            line-height: 28px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  > a {
+    font-family: $main_font;
+    display: block;
+    max-width: 130px;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #24282f;
+    border: 2px solid #7c7e82;
+    padding: 13px 29px;
+    border-radius: 30px;
+  }
+}
+
+.reviews {
+  background-color: #f7f7f7;
+  padding: 95px 0;
+
+  .container {
+    max-width: 715px;
+
+    .owl-carousel {
+      div {
+        h2 {
+          font-family: $primary_font;
+          font-weight: 600;
+          font-size: 19px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #24282f;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            margin: 25px auto 50px;
+            background-color: #24282f;
+          }
+        }
+
+        img {
+          display: block;
+          max-width: 72px;
+          margin: 0 auto 30px;
+        }
+
+        p {
+          font-family: $main_font;
+          padding: 0 15px;
+          font-weight: 300;
+          font-size: 11px;
+          color: black;
+          text-align: center;
+          margin-bottom: 35px;
+          line-height: 2;
+          letter-spacing: 0.6px;
+        }
+
+        h3 {
+          font-family: $main_font;
+          font-weight: 600;
+          font-size: 13px;
+          color: #b2a563;
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          line-height: 2;
+
+          span {
+            font-weight: 400;
+            font-size: 11px;
+            color: black;
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      .owl-nav {
+        @extend .flex;
+        position: relative;
+
+        .owl-prev {
+          &:before {
+            font-family: $icon;
+            font-weight: 900;
+            outline: none;
+            font-size: 13px;
+            color: #24282f;
+            content: "\f104";
+            position: absolute;
+            bottom: 200px;
+            left: -95px;
+          }
+        }
+
+        .owl-next {
+          &:after {
+            font-family: $icon;
+            font-weight: 900;
+            outline: none;
+            font-size: 13px;
+            color: #24282f;
+            content: "\f105";
+            position: absolute;
+            bottom: 200px;
+            right: -95px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .about {
+    background-color: #2b2e35;
+    padding: 63px 0 48px;
+    border-bottom: 2px solid #42464c;
+
+    .container {
+      max-width: 900px;
+      @extend .flex;
+
+      .about_fapor {
+        h3 {
+          font-family: $main_font;
+          color: #b2a563;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 11px;
+          margin-bottom: 23px;
+        }
+
+        p {
+          font-family: $main_font;
+          font-size: 11px;
+          color: #6e7279;
+          line-height: 19px;
+        }
+      }
+
+      .contact_info {
+        h3 {
+          font-family: $main_font;
+          color: #b2a563;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 11px;
+          margin-bottom: 23px;
+        }
+
+        p {
+          font-family: $main_font;
+          font-size: 11px;
+          color: #6e7279;
+          line-height: 17px;
+          text-decoration: none;
+
+          &:first-of-type {
+            margin-bottom: 15px;
+          }
+        }
+
+        a {
+          font-family: $main_font;
+          font-size: 11px;
+          color: #6e7279;
+          line-height: 17px;
+          text-decoration: none;
+        }
+      }
+
+      form {
+        h3 {
+          font-family: $main_font;
+          color: #b2a563;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 11px;
+          margin-bottom: 23px;
+        }
+
+        input {
+          font-family: $main_font;
+          min-width: 240px;
+          width: 100%;
+          display: block;
+          padding: 10px;
+          background-color: #24282f;
+          color: #6e7279;
+          border: 2px #4d5258 solid;
+          font-size: 11px;
+          margin-bottom: 10px;
+          outline: none;
+        }
+
+        button {
+          font-family: $main_font;
+          min-width: 240px;
+          width: 100%;
+          display: block;
+          padding: 10px;
+          background-color: #b2a563;
+          color: white;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 11px;
+          border: #b2a563 1px solid;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .feedback {
+    background-color: #24282f;
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    .container {
+      @extend .flex;
+
+      p {
+        font-family: $main_font;
+        display: inline-block;
+        color: #6e7279;
+        font-size: 9.5px;
+        margin-top: 5px;
+
+        &:before {
+          content: "©";
+          margin-right: 3px;
+          font-size: 10px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        margin-left: 8px;
+        text-decoration: none;
+        color: #6e7279;
+        border-radius: 50%;
+        border: 1px solid;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 14px;
+
+        &:hover, &.active {
+          background-color: #b2a563;
+          color: white;
+          border-color: #b2a563;
+        }
+      }
+    }
+  }
+}

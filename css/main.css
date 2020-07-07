@@ -1,0 +1,350 @@
+@charset "UTF-8";
+@import "fonts.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
+@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.flex, footer .feedback .container, footer .about .container, .reviews .container .owl-carousel .owl-nav, .management .container .workers .workers_itm div, .management .container .workers .workers_itm, .management .container, header .container ul, header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background-color: #24282f;
+  padding-top: 30px;
+}
+header .container .logo {
+  margin-left: 7px;
+}
+header .container ul {
+  list-style: none;
+}
+header .container ul li {
+  margin-left: 50px;
+}
+header .container ul li:first-of-type {
+  margin-left: 0;
+}
+header .container ul li a {
+  color: white;
+  font-family: "Open Sans";
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 19px;
+}
+header .container ul li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #b2a563;
+  margin-top: 29px;
+  transition: 0.3s;
+}
+header .container ul li:hover a:after, header .container ul li.active a:after {
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  background: url("../images/bg_blur.jpg") no-repeat top center #2b2e35;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: white;
+}
+.banner h1 {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  line-height: 0.7;
+}
+.banner p {
+  font-family: "Open Sans";
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  line-height: 1.7;
+}
+
+.management {
+  padding-top: 120px;
+  padding-bottom: 25px;
+}
+.management h2 {
+  color: #24282f;
+  font-family: "Raleway";
+  font-size: 19px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+.management h2:after {
+  display: block;
+  content: "";
+  width: 61px;
+  height: 2px;
+  background-color: #b2a563;
+  margin: 22px auto 26px;
+}
+.management .container {
+  max-width: 900px;
+  margin-bottom: 35px;
+}
+.management .container .workers img {
+  display: block;
+  margin-bottom: 25px;
+}
+.management .container .workers .workers_itm h3 {
+  display: inline-block;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 13px;
+  color: #232323;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+.management .container .workers .workers_itm h3 span {
+  font-family: "Open Sans";
+  font-size: 11px;
+  text-transform: capitalize;
+  color: #b2a563;
+}
+.management .container .workers .workers_itm div a {
+  margin-right: 6px;
+  margin-top: 2px;
+  background-color: #dedede;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  width: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.management > a {
+  font-family: "Open Sans";
+  display: block;
+  max-width: 130px;
+  margin: 0 auto;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #24282f;
+  border: 2px solid #7c7e82;
+  padding: 13px 29px;
+  border-radius: 30px;
+}
+
+.reviews {
+  background-color: #f7f7f7;
+  padding: 95px 0;
+}
+.reviews .container {
+  max-width: 715px;
+}
+.reviews .container .owl-carousel div h2 {
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #24282f;
+}
+.reviews .container .owl-carousel div h2:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 25px auto 50px;
+  background-color: #24282f;
+}
+.reviews .container .owl-carousel div img {
+  display: block;
+  max-width: 72px;
+  margin: 0 auto 30px;
+}
+.reviews .container .owl-carousel div p {
+  font-family: "Open Sans";
+  padding: 0 15px;
+  font-weight: 300;
+  font-size: 11px;
+  color: black;
+  text-align: center;
+  margin-bottom: 35px;
+  line-height: 2;
+  letter-spacing: 0.6px;
+}
+.reviews .container .owl-carousel div h3 {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 13px;
+  color: #b2a563;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+.reviews .container .owl-carousel div h3 span {
+  font-weight: 400;
+  font-size: 11px;
+  color: black;
+  text-transform: capitalize;
+}
+.reviews .container .owl-carousel .owl-nav {
+  position: relative;
+}
+.reviews .container .owl-carousel .owl-nav .owl-prev:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  outline: none;
+  font-size: 13px;
+  color: #24282f;
+  content: "";
+  position: absolute;
+  bottom: 200px;
+  left: -95px;
+}
+.reviews .container .owl-carousel .owl-nav .owl-next:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  outline: none;
+  font-size: 13px;
+  color: #24282f;
+  content: "";
+  position: absolute;
+  bottom: 200px;
+  right: -95px;
+}
+
+footer .about {
+  background-color: #2b2e35;
+  padding: 63px 0 48px;
+  border-bottom: 2px solid #42464c;
+}
+footer .about .container {
+  max-width: 900px;
+}
+footer .about .container .about_fapor h3 {
+  font-family: "Open Sans";
+  color: #b2a563;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  margin-bottom: 23px;
+}
+footer .about .container .about_fapor p {
+  font-family: "Open Sans";
+  font-size: 11px;
+  color: #6e7279;
+  line-height: 19px;
+}
+footer .about .container .contact_info h3 {
+  font-family: "Open Sans";
+  color: #b2a563;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  margin-bottom: 23px;
+}
+footer .about .container .contact_info p {
+  font-family: "Open Sans";
+  font-size: 11px;
+  color: #6e7279;
+  line-height: 17px;
+  text-decoration: none;
+}
+footer .about .container .contact_info p:first-of-type {
+  margin-bottom: 15px;
+}
+footer .about .container .contact_info a {
+  font-family: "Open Sans";
+  font-size: 11px;
+  color: #6e7279;
+  line-height: 17px;
+  text-decoration: none;
+}
+footer .about .container form h3 {
+  font-family: "Open Sans";
+  color: #b2a563;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  margin-bottom: 23px;
+}
+footer .about .container form input {
+  font-family: "Open Sans";
+  min-width: 240px;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  background-color: #24282f;
+  color: #6e7279;
+  border: 2px #4d5258 solid;
+  font-size: 11px;
+  margin-bottom: 10px;
+  outline: none;
+}
+footer .about .container form button {
+  font-family: "Open Sans";
+  min-width: 240px;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  background-color: #b2a563;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  border: #b2a563 1px solid;
+  outline: none;
+}
+footer .feedback {
+  background-color: #24282f;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+footer .feedback .container p {
+  font-family: "Open Sans";
+  display: inline-block;
+  color: #6e7279;
+  font-size: 9.5px;
+  margin-top: 5px;
+}
+footer .feedback .container p:before {
+  content: "©";
+  margin-right: 3px;
+  font-size: 10px;
+}
+footer .feedback .container a {
+  display: inline-block;
+  margin-left: 8px;
+  text-decoration: none;
+  color: #6e7279;
+  border-radius: 50%;
+  border: 1px solid;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 14px;
+}
+footer .feedback .container a:hover, footer .feedback .container a.active {
+  background-color: #b2a563;
+  color: white;
+  border-color: #b2a563;
+}
+
+/*# sourceMappingURL=main.css.map */
