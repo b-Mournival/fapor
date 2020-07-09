@@ -11,6 +11,7 @@
 .container {
   max-width: 1170px;
   margin: auto;
+  position: relative;
 }
 
 .flex, footer .feedback .container, footer .about .container, .reviews .container .owl-carousel .owl-nav, .management .container .workers .workers_itm div, .management .container .workers .workers_itm, .management .container, header .container ul, header .container {
@@ -18,12 +19,37 @@
   justify-content: space-between;
 }
 
+.about_block, footer .about .container form, footer .about .container .contact_info, footer .about .container .about_fapor {
+  max-width: 240px;
+  width: 100%;
+}
+
+.about_h, footer .about .container form h3, footer .about .container .contact_info h3, footer .about .container .about_fapor h3 {
+  font-family: "Open Sans";
+  color: #b2a563;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  margin-bottom: 23px;
+}
+
+.about_p, footer .about .container .contact_info p, footer .about .container .about_fapor p {
+  font-family: "Open Sans";
+  font-size: 11px;
+  color: #6e7279;
+  line-height: 19px;
+}
+
 header {
   background-color: #24282f;
   padding-top: 30px;
 }
 header .container .logo {
+  max-width: 119px;
   margin-left: 7px;
+}
+header .container .logo img {
+  width: 100%;
 }
 header .container ul {
   list-style: none;
@@ -48,11 +74,45 @@ header .container ul li a:after {
   width: 0;
   height: 2px;
   background-color: #b2a563;
-  margin-top: 29px;
+  margin-top: 30px;
   transition: 0.3s;
 }
 header .container ul li:hover a:after, header .container ul li.active a:after {
   width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  header .container {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .container {
+    display: block;
+  }
+  header .container .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    transform: scale(0.75);
+    background-color: #383631;
+  }
+  header .container .logo:after {
+    margin: 5px auto 15px;
+    content: "";
+    display: block;
+    width: 119px;
+    height: 3px;
+    background-color: #b2a563;
+  }
+  header .container ul {
+    justify-content: space-around;
+  }
+  header .container ul li {
+    margin-left: 0;
+  }
+  header .container ul li a:after {
+    margin-top: 15px;
+  }
 }
 
 .banner {
@@ -63,19 +123,38 @@ header .container ul li:hover a:after, header .container ul li.active a:after {
   padding-bottom: 70px;
   color: white;
 }
-.banner h1 {
+.banner .container h1 {
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
   font-size: 32px;
   letter-spacing: 2px;
   margin-bottom: 15px;
-  line-height: 0.7;
 }
-.banner p {
+.banner .container p {
+  max-width: 60%;
   font-family: "Open Sans";
   font-size: 11px;
   letter-spacing: 0.3px;
   line-height: 1.7;
+}
+@media screen and (max-width: 1200px) {
+  .banner .container {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner .container {
+    max-width: 600px;
+    text-align: center;
+  }
+  .banner .container p {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .banner .container {
+    transform: scale(0.9);
+  }
 }
 
 .management {
@@ -132,6 +211,32 @@ header .container ul li:hover a:after, header .container ul li.active a:after {
   width: 28px;
   line-height: 28px;
   font-size: 14px;
+}
+@media screen and (max-width: 1200px) {
+  .management .container {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .management .container {
+    display: block;
+    max-width: 246px;
+    margin: auto;
+  }
+  .management .container .workers:after {
+    content: "";
+    display: block;
+    width: 230px;
+    height: 1px;
+    margin: 10px auto 30px;
+    background-color: silver;
+  }
+  .management .container .workers:last-of-type:after {
+    display: none;
+  }
+  .management .container .workers:last-of-type {
+    margin-bottom: 30px;
+  }
 }
 .management > a {
   font-family: "Open Sans";
@@ -228,6 +333,11 @@ header .container ul li:hover a:after, header .container ul li.active a:after {
   bottom: 200px;
   right: -95px;
 }
+@media screen and (max-width: 1200px) {
+  .reviews .container {
+    padding: 0 15px;
+  }
+}
 
 footer .about {
   background-color: #2b2e35;
@@ -236,35 +346,13 @@ footer .about {
 }
 footer .about .container {
   max-width: 900px;
+  position: relative;
 }
-footer .about .container .about_fapor h3 {
-  font-family: "Open Sans";
-  color: #b2a563;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 11px;
-  margin-bottom: 23px;
-}
-footer .about .container .about_fapor p {
-  font-family: "Open Sans";
-  font-size: 11px;
-  color: #6e7279;
-  line-height: 19px;
-}
-footer .about .container .contact_info h3 {
-  font-family: "Open Sans";
-  color: #b2a563;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 11px;
-  margin-bottom: 23px;
+footer .about .container .contact_info {
+  max-width: 200px;
 }
 footer .about .container .contact_info p {
-  font-family: "Open Sans";
-  font-size: 11px;
-  color: #6e7279;
   line-height: 17px;
-  text-decoration: none;
 }
 footer .about .container .contact_info p:first-of-type {
   margin-bottom: 15px;
@@ -276,16 +364,9 @@ footer .about .container .contact_info a {
   line-height: 17px;
   text-decoration: none;
 }
-footer .about .container form h3 {
-  font-family: "Open Sans";
-  color: #b2a563;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 11px;
-  margin-bottom: 23px;
-}
 footer .about .container form input {
   font-family: "Open Sans";
+  box-sizing: border-box;
   min-width: 240px;
   width: 100%;
   display: block;
@@ -310,11 +391,44 @@ footer .about .container form button {
   font-size: 11px;
   border: #b2a563 1px solid;
   outline: none;
+  transition: 0.1s;
+}
+footer .about .container form button:active {
+  transform: scale(0.99);
+}
+@media screen and (max-width: 1200px) {
+  footer .about .container {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .about .container {
+    display: block;
+    max-width: 500px;
+  }
+  footer .about .container .about_fapor {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  footer .about .container .contact_info {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  footer .about .container form {
+    max-width: 240px;
+    margin: auto;
+    text-align: center;
+  }
 }
 footer .feedback {
   background-color: #24282f;
   padding-top: 15px;
   padding-bottom: 10px;
+}
+footer .feedback .container {
+  flex-direction: row-reverse;
 }
 footer .feedback .container p {
   font-family: "Open Sans";
@@ -345,6 +459,20 @@ footer .feedback .container a:hover, footer .feedback .container a.active {
   background-color: #b2a563;
   color: white;
   border-color: #b2a563;
+}
+@media screen and (max-width: 1200px) {
+  footer .feedback .container {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .feedback .container {
+    display: block;
+    text-align: center;
+  }
+  footer .feedback .container a {
+    margin-bottom: 10px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

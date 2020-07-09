@@ -14,6 +14,8 @@ $icon: "Font Awesome 5 Free";
   }
 }
 
+//UNIVERSAL
+
 * {
   padding: 0;
   margin: 0;
@@ -22,12 +24,36 @@ $icon: "Font Awesome 5 Free";
 .container {
   max-width: 1170px;
   margin: auto;
+  position: relative;
 }
 
 .flex {
   display: flex;
   justify-content: space-between;
 }
+
+.about_block {
+  max-width: 240px;
+  width: 100%;
+}
+
+.about_h {
+  font-family: $main_font;
+  color: #b2a563;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  margin-bottom: 23px;
+}
+
+.about_p {
+  font-family: $main_font;
+  font-size: 11px;
+  color: #6e7279;
+  line-height: 19px;
+}
+
+//BODY
 
 header {
   background-color: #24282f;
@@ -37,7 +63,12 @@ header {
     @extend .flex;
 
     .logo {
+      max-width: 119px;
       margin-left: 7px;
+
+      img {
+        width: 100%;
+      }
     }
 
     ul {
@@ -46,6 +77,7 @@ header {
 
       li {
         margin-left: 50px;
+
 
         &:first-of-type {
           margin-left: 0;
@@ -65,7 +97,7 @@ header {
             width: 0;
             height: 2px;
             background-color: #b2a563;
-            margin-top: 29px;
+            margin-top: 30px;
             transition: 0.3s;
           }
         }
@@ -74,6 +106,43 @@ header {
           a {
             &:after {
               width: 100%;
+            }
+          }
+        }
+
+      }
+    }
+
+    @include max-screen(1200px) {
+      padding: 0 15px;
+    }
+    @include max-screen(767px) {
+      display: block;
+      .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+        transform: scale(0.75);
+        background-color: #383631;
+
+        &:after {
+          margin: 5px auto 15px;
+          content: "";
+          display: block;
+          width: 119px;
+          height: 3px;
+          background-color: #b2a563;
+        }
+      }
+      ul {
+        justify-content: space-around;
+
+        li {
+          margin-left: 0;
+
+          a {
+            &:after {
+              margin-top: 15px;
             }
           }
         }
@@ -90,20 +159,37 @@ header {
   padding-bottom: 70px;
   color: white;
 
-  h1 {
-    text-transform: uppercase;
-    font-family: $primary_font, sans-serif;
-    font-size: 32px;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    line-height: 0.7;
-  }
+  .container {
 
-  p {
-    font-family: $main_font;
-    font-size: 11px;
-    letter-spacing: 0.3px;
-    line-height: 1.7;
+    h1 {
+      text-transform: uppercase;
+      font-family: $primary_font, sans-serif;
+      font-size: 32px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 60%;
+      font-family: $main_font;
+      font-size: 11px;
+      letter-spacing: 0.3px;
+      line-height: 1.7;
+    }
+
+    @include max-screen(1200px) {
+      padding: 0 15px;
+    }
+    @include max-screen(767px) {
+      max-width: 600px;
+      text-align: center;
+      p {
+        max-width: 100%;
+      }
+    }
+    @include max-screen(360px) {
+      transform: scale(0.9);
+    }
   }
 }
 
@@ -135,6 +221,7 @@ header {
     @extend .flex;
 
     .workers {
+
       img {
         display: block;
         margin-bottom: 25px;
@@ -175,6 +262,33 @@ header {
             line-height: 28px;
             font-size: 14px;
           }
+        }
+      }
+    }
+
+    @include max-screen(1200px) {
+      padding: 0 15px;
+    }
+    @include max-screen(767px) {
+      display: block;
+      max-width: 246px;
+      margin: auto;
+      .workers {
+        &:after {
+          content: "";
+          display: block;
+          width: 230px;
+          height: 1px;
+          margin: 10px auto 30px;
+          background-color: silver;
+        }
+
+        &:last-of-type:after {
+          display: none;
+        }
+
+        &:last-of-type {
+          margin-bottom: 30px;
         }
       }
     }
@@ -293,6 +407,10 @@ header {
         }
       }
     }
+
+    @include max-screen(1200px) {
+      padding: 0 15px;
+    }
   }
 }
 
@@ -304,42 +422,32 @@ footer {
 
     .container {
       max-width: 900px;
+      position: relative;
       @extend .flex;
 
       .about_fapor {
+        @extend .about_block;
+
         h3 {
-          font-family: $main_font;
-          color: #b2a563;
-          text-transform: uppercase;
-          font-weight: 600;
-          font-size: 11px;
-          margin-bottom: 23px;
+          @extend .about_h;
         }
 
         p {
-          font-family: $main_font;
-          font-size: 11px;
-          color: #6e7279;
-          line-height: 19px;
+          @extend .about_p;
         }
       }
 
       .contact_info {
+        @extend .about_block;
+        max-width: 200px;
+
         h3 {
-          font-family: $main_font;
-          color: #b2a563;
-          text-transform: uppercase;
-          font-weight: 600;
-          font-size: 11px;
-          margin-bottom: 23px;
+          @extend .about_h;
         }
 
         p {
-          font-family: $main_font;
-          font-size: 11px;
-          color: #6e7279;
+          @extend .about_p;
           line-height: 17px;
-          text-decoration: none;
 
           &:first-of-type {
             margin-bottom: 15px;
@@ -356,17 +464,15 @@ footer {
       }
 
       form {
+        @extend .about_block;
+
         h3 {
-          font-family: $main_font;
-          color: #b2a563;
-          text-transform: uppercase;
-          font-weight: 600;
-          font-size: 11px;
-          margin-bottom: 23px;
+          @extend .about_h;
         }
 
         input {
           font-family: $main_font;
+          box-sizing: border-box;
           min-width: 240px;
           width: 100%;
           display: block;
@@ -392,6 +498,34 @@ footer {
           font-size: 11px;
           border: #b2a563 1px solid;
           outline: none;
+          transition: 0.1s;
+
+          &:active {
+            transform: scale(0.99);
+          }
+        }
+      }
+
+      @include max-screen(1200px) {
+        padding: 0 15px;
+      }
+      @include max-screen(767px) {
+        display: block;
+        max-width: 500px;
+        .about_fapor {
+          max-width: 100%;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .contact_info {
+          max-width: 100%;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        form {
+          max-width: 240px;
+          margin: auto;
+          text-align: center;
         }
       }
     }
@@ -404,6 +538,7 @@ footer {
 
     .container {
       @extend .flex;
+      flex-direction: row-reverse;
 
       p {
         font-family: $main_font;
@@ -436,6 +571,17 @@ footer {
           background-color: #b2a563;
           color: white;
           border-color: #b2a563;
+        }
+      }
+
+      @include max-screen(1200px) {
+        padding: 0 15px;
+      }
+      @include max-screen(767px) {
+        display: block;
+        text-align: center;
+        a {
+          margin-bottom: 10px;
         }
       }
     }
