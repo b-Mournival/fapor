@@ -411,7 +411,7 @@ header {
     @include max-screen(1200px) {
       padding: 0 15px;
     }
-    @include max-screen(767px) {
+    @include max-screen(992px) {
       .owl-prev, .owl-next {
         display: none;
       }

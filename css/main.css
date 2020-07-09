@@ -338,7 +338,7 @@ header .container ul li:hover a:after, header .container ul li.active a:after {
     padding: 0 15px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   .reviews .container .owl-prev, .reviews .container .owl-next {
     display: none;
   }
