@@ -411,6 +411,34 @@ header {
     @include max-screen(1200px) {
       padding: 0 15px;
     }
+    @include max-screen(767px) {
+      .owl-prev, .owl-next {
+        display: none;
+      }
+      .owl-dots {
+        margin-top: 10px;
+        text-align: center;
+        .owl-dot {
+          outline: none;
+          span {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background-color: #b2a563;
+            border-radius: 50%;
+            margin: 0 7px;
+          }
+          &.active {
+            span {
+              width: 10px;
+              height: 10px;
+              position: relative;
+              bottom: -1px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
